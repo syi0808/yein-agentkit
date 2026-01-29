@@ -50,34 +50,76 @@ Bullet list of 4-8 features. Each bullet has a bold title followed by a dash and
 
 ## Section 4: Getting Started
 
-Three subsections: Prerequisites, Installation, Running.
+Write this section for **end users**, not developers. Focus on how to download, install, and set up the project to use it. Developer build instructions belong in CONTRIBUTING.md.
 
-For Prerequisites: list actual requirements found in config files (minimum OS version, runtime version, build tools). Do not guess — check `Package.swift`, `*.xcodeproj`, `Cargo.toml`, `package.json`, `pyproject.toml`, or equivalent.
+Adapt the subsections to the project type:
+- **Application** → Requirements, Download, Setup (permissions, configuration)
+- **CLI tool** → Requirements, Install (brew/cargo install/npm install -g/pip install), Verify
+- **Library** → Requirements, Install (package manager command), Import
 
-For Installation: write the actual clone + build commands. Use the real build system.
+For Requirements: list the minimum OS/runtime version from config files. Do not include build tools (Xcode, compilers) — those are for contributors.
 
-For Running: explain how to launch or execute the project after building.
+For Download/Install: use the distribution channel the user specified (GitHub Releases, package registry, website, etc.). If the project is only available as source, provide clone + build commands as a fallback.
 
-<example>
+For Setup: describe any first-run configuration, permissions, or environment setup the end user needs.
+
+<example_application>
 ## Getting Started
 
-### Prerequisites
+### Requirements
 
 - macOS 13.0 or later
-- Xcode 15.0 or later
 
-### Installation
+### Download
+
+Download the latest version from [GitHub Releases](https://github.com/user/screenize/releases).
+
+Open the `.dmg` file and drag Screenize into the Applications folder.
+
+### Setup
+
+On first launch, Screenize will request the following permissions:
+
+1. **Screen Recording** — Required to capture your screen
+2. **Microphone** — Required for audio recording
+3. **Accessibility** — Required for UI element detection and smart zoom
+
+Grant each permission when prompted, or enable them manually under **System Settings > Privacy & Security**.
+</example_application>
+
+<example_cli>
+## Getting Started
+
+### Requirements
+
+- Node.js 18 or later
+
+### Install
 
 ```bash
-git clone https://github.com/user/screenize.git
-cd screenize
-xcodebuild -project Screenize.xcodeproj -scheme Screenize -configuration Debug build
+npm install -g mytool
 ```
 
-### Running
+### Verify
 
-Open `Screenize.xcodeproj` in Xcode and press Cmd+R to build and run.
-</example>
+```bash
+mytool --version
+```
+</example_cli>
+
+<example_library>
+## Getting Started
+
+### Requirements
+
+- Python 3.10 or later
+
+### Install
+
+```bash
+pip install mylib
+```
+</example_library>
 
 ## Section 5: Usage
 

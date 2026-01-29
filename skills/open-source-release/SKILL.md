@@ -66,6 +66,7 @@ Ask the user these questions using `AskUserQuestion`. Ask all questions in a sin
 2. One-line description — a single sentence describing the project for someone who has never seen it
 3. Author or organization name — used in LICENSE copyright and contact section
 4. License choice — default is Apache 2.0; confirm or let the user choose another
+5. Download/install method — how end users obtain the project (e.g., GitHub Releases, npm, pip, brew, website, build from source). This determines the Getting Started section in the README.
 </questions>
 
 If the user's answers are ambiguous, ask a follow-up question to clarify. Do not guess.
